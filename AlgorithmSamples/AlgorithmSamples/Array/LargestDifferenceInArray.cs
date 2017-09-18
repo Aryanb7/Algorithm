@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.Array
+namespace AlgorithmSamples.Array
 {
 	public class LargestDifferenceInArray
 	{

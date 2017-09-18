@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.String
+namespace AlgorithmSamples.String
 {
 	//str = madam
 	//revers = madam

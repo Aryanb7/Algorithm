@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace DataStructure.DataStructure.String
+namespace AlgorithmSamples.String
 {
 	public static class RemoveDuplicateCharacters
 	{

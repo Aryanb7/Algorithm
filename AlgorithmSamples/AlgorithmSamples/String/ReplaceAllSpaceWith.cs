@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.String
+namespace AlgorithmSamples.String
 {
 	//TODO: Replace all spaces in a string with “%20″
 	public static class ReplaceAllSpaceWith

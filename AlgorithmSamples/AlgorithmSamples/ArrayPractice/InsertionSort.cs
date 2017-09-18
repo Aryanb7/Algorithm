@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.ArrayPractice
+namespace AlgorithmSamples.ArrayPractice
 {
 	//it is not good sort algorithm, but it is better than bubble sort and selection sort
 	public static class InsertionSort

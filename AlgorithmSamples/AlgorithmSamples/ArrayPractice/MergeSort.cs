@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.ArrayPractice
+namespace AlgorithmSamples.ArrayPractice
 {
     //complexity is O(nlogn) in worst case
     //we use recursion in this algorithm but in other type of the sort we rearranging the element and change the element position with swapping and shifting 

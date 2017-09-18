@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructure.DataStructure.ArrayPractice
+namespace AlgorithmSamples.ArrayPractice
 {
 	//O(n2)
 	//compare between 2 element and swipe the element if need, we do it till array get sort

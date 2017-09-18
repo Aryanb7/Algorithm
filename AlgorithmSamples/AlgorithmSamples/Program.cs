@@ -1,9 +1,6 @@
-﻿using DataStructure.DataStructure.ArrayPractice;
-using DataStructure.DataStructure.Array;
-using DataStructure.DataStructure.String;
-using DataStructure.DataStructure.ArrayPractice;
-using DataStructure.DataStructure.Array;
-
+﻿using AlgorithmSamples.ArrayPractice;
+using AlgorithmSamples.Array;
+using AlgorithmSamples.String;
 using System;
 using System.Collections.Generic;
 using System.Linq;
