@@ -43,8 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayPractice\BubbleSort.cs" />
+    <Compile Include="ArrayPractice\InsertionSort.cs" />
+    <Compile Include="ArrayPractice\MergeSort.cs" />
+    <Compile Include="ArrayPractice\SelectionSort.cs" />
+    <Compile Include="Array\LargestDifferenceInArray.cs" />
+    <Compile Include="Array\LargestValueArray.cs" />
+    <Compile Include="Array\RemoveDuplicates.cs" />
+    <Compile Include="Array\SortArray.cs" />
+    <Compile Include="Array\YieldClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String\CheckAnagram.cs" />
+    <Compile Include="String\EliminatePairs.cs" />
+    <Compile Include="String\FirstNonRepeatedCharacter.cs" />
+    <Compile Include="String\MoveSpacesToFrontString.cs" />
+    <Compile Include="String\RemoveDuplicateCharacters.cs" />
+    <Compile Include="String\ReplaceAllSpaceWith.cs" />
+    <Compile Include="String\ReverseStringWordByWord.cs" />
+    <Compile Include="String\ReversIspalindrome.cs" />
+    <Compile Include="String\ReversString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
