@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,6 +58,7 @@
     <Compile Include="String\CheckAnagram.cs" />
     <Compile Include="String\EliminatePairs.cs" />
     <Compile Include="String\FirstNonRepeatedCharacter.cs" />
+    <Compile Include="String\KMPAlgorithm.cs" />
     <Compile Include="String\MoveSpacesToFrontString.cs" />
     <Compile Include="String\RemoveDuplicateCharacters.cs" />
     <Compile Include="String\ReplaceAllSpaceWith.cs" />

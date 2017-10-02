@@ -6,48 +6,67 @@ using System.Threading.Tasks;
 
 namespace AlgorithmSamples.String
 {
-	//Eliminate Pairs: eg. input string RGBBGBGR –> RGGBGR–> RBGR (output)
-	public static class EliminatePairs
-	{
-		public static void Run(string str)
-		{
-            //int len = str.Length;
-            //int i, j = 0;
-            //string tempStr = string.Empty;
-            //for (i = 1; i < len; i++)
-            //{
-            //    while ((str[i] == str[j]) && (j >= 0))
-            //    {
-            //        i++;
-            //        j--;
-            //    }
-            //    str[j++] = str[i];
-            //}
-            //str[j + 1] = '\0';
+    //Eliminate Pairs: eg. input string RGBBGBGR –> RGGBGR–> RBGR (output)
+    public static class EliminatePairs
+    {
+        public static void Run(string str)
+        {
+            //Remove(str);  
+             Remove_2(str);
+            Console.WriteLine(str);
+            Console.ReadKey();
 
+        }
 
-            //string tempStr = string.Empty;
-            //int j = 1;
-            //for (int i = 0; i < str.Length - 1; i++) {
-            //    if (str[i] != str[i + 1]) {
-            //        tempStr += str[i];
-            //    }
-            //    else {
-            //        i = IsPair(i, str);
-            //    }
-            //}
+        public static void Remove(string str)
+        {
+            int len = str.Length;
+            int i = 0;
+            string tempStr = string.Empty;
 
-            //Console.WriteLine(tempStr);
-            //Console.ReadKey();
+            for (i = 0; i < len; i++)
+            {
 
-		}
-		private static int IsPair(int index, string str)
-		{
-			if (str[index - 1] == str[index + 2]) {
-				IsPair(index -1, str);
-			}
-			return index;
-		}
+                if (i + 1 < len && str[i] == str[i + 1] )
+                {
+                    Remove(tempStr + str.Substring(i + 2, len - (i+2)));
+                }
+                else
+                {
+                    tempStr += str[i];
+                }
 
-	}
+            }
+            var t = 1;
+        }
+
+        public static unsafe void Remove_2(string str)
+        {
+            // compile with: /unsafe
+            int len = str.Length;
+            int i , j  = 0;
+            var  t = str.ToCharArray();
+            for (i = 1; i < len; i++)
+            {
+                while ((t[i] == t[j]) && (j >= 0))
+                {
+                    i++;
+                    j--;
+                }
+                t[j++] = str[i];
+            }
+            t[j + 1] = '\0';
+            return;
+
+        }
+
+        private static int IsPair(int index, string str)
+        {
+            if (str[index] == str[index + 1])
+            {
+                IsPair(index - 1, str);
+            }
+            return index;
+        }
+    }
 }

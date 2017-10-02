@@ -23,10 +23,12 @@ namespace AlgorithmSamples
             //EliminatePairs.Run("RGBBGBGR");
             //RemoveDuplicateCharacters.Run("crazyforcode");
             //RemoveDuplicateCharacters.Run();
-            MergeSort m = new MergeSort();
+           // MergeSort m = new MergeSort();
             //EliminatePairs.Run("RGBBGBGR");
             //ReverseStringWordByWord.Run("Hello! How are you");
-            m.Run();
+            KMPAlgorithm k = new KMPAlgorithm();
+            k.Search();
+           // m.Run();
         }
     }
 }
