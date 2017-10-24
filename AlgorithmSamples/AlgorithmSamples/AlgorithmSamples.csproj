@@ -48,6 +48,7 @@
     <Compile Include="ArrayPractice\InsertionSort.cs" />
     <Compile Include="ArrayPractice\MergeSort.cs" />
     <Compile Include="ArrayPractice\SelectionSort.cs" />
+    <Compile Include="Array\JumpGame.cs" />
     <Compile Include="Array\LargestDifferenceInArray.cs" />
     <Compile Include="Array\LargestValueArray.cs" />
     <Compile Include="Array\RemoveDuplicates.cs" />

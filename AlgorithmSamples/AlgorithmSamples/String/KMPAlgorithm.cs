@@ -36,26 +36,31 @@ namespace AlgorithmSamples.String
             {
                 if (i == 0)
                 {
+                    // The First Item is always zero
                     pt[0] = 0;
                 }
 
                 else if (pattern[j] == pattern[i])
                 {
+                    // match item is found
                     pt[i] = j + 1;
                     j++;
                 }
                 else if (pattern[j] != pattern[i] && j == 0)
                 {
+                    // there is no more match was found in the pattern
                     pt[i] = 0;
                 }
                 else if (pattern[j] != pattern[i] && j != 0)
                 {
+                    // we have to find the match in previous item
                     while (j >= 0)
                     {
                         // 1 - Get Last Index = looking for the value of last I in pattern 
                         // 2-  Get the value of I in PT(Pattern table) array                      
                         int ptLastIndexValue = pt[j - 1];
                         j = ptLastIndexValue;
+                        // 3- compare 
                         if (pattern[ptLastIndexValue] == pattern[i])
                         {
                             //perviuosVal is the index of pt that contain the value 
@@ -82,12 +87,110 @@ namespace AlgorithmSamples.String
             return pt;
         }
 
-        public void Search() {
-            char[] pattern = "abcdabca".ToCharArray();
+        public void Search()
+        {
+            //char[] pattern = "abcdabca".ToCharArray();
             //char[] pattern = "aacdabca".ToCharArray();
             //char[] pattern = "acacabacacabacacac".ToCharArray();
+            char[] pattern = "abcaby".ToCharArray();
             var pt = GetPatternTable(pattern);
-            var t = 0;
+            var text = "abxabcabcaby";
+
+            var txtArr = text.ToCharArray();
+            int pointer = 0;
+            int successPoints = pattern.Length;
+            bool success = false;
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i].Equals(pattern[pointer]))
+                {
+                    pointer++;
+                }
+                else
+                {
+                    if (pointer != 0)
+                    {
+                        int tempPointer = pointer - 1;
+                        pointer = pt[tempPointer];
+                        i--;
+                    }
+                }
+
+                if (successPoints == pointer)
+                {
+                    success = true;
+                }
+            }
+
+            if (success)
+            {
+                System.Console.WriteLine("TRUE");
+            }
+            else
+            {
+                System.Console.WriteLine("FALSE");
+            }
+            System.Console.Read();
         }
+
+        //public void Search()
+        //{
+        //    //char[] pattern = "abcdabca".ToCharArray();
+        //    //char[] pattern = "aacdabca".ToCharArray();
+        //    //char[] pattern = "acacabacacabacacac".ToCharArray();
+        //    char[] pattern = "abcabhy".ToCharArray();
+        //    var pt = GetPatternTable(pattern);
+
+        //    var text = "abxabcabcaby";
+        //    var txtArr = text.ToCharArray();
+        //    var j = 0;
+        //    for (int i = 0; i < txtArr.Length; i++)
+        //    {
+        //        if (pt.Length == j)
+        //        {
+        //            Console.WriteLine("matched");
+        //            break;
+        //        }
+        //        if (txtArr[i] == pattern[j])
+        //            j++;
+
+        //        else if (txtArr[i] != pattern[j])
+        //        {
+
+        //            while (j >= 0)
+        //            {
+        //                // 1 - Get Last Index = looking for the value of last I in pattern 
+        //                // 2-  Get the value of I in PT(Pattern table) array                      
+        //                int ptLastIndexValue = pt[j - 1];
+
+        //                // 3- compare 
+        //                if (pattern[ptLastIndexValue] == txtArr[i])
+        //                {
+
+        //                    //perviuosVal is the index of pt that contain the value 
+        //                    j++;
+        //                    break;
+        //                }
+        //                else
+        //                {
+        //                    j = ptLastIndexValue;
+        //                    if (j == 0 || j == 1)
+        //                    {
+        //                        j = 0;
+        //                        break;
+        //                    }
+
+
+        //                }
+
+        //            }
+        //        }
+        //    }
+
+
+
+
+        //    var t = 0;
+        //}
     }
 }
