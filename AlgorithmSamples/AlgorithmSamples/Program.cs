@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmSamples.Dynamic_Programming;
+using AlgorithmSamples.Dynamic_Connectivity;
 
 namespace AlgorithmSamples
 {
@@ -28,7 +30,9 @@ namespace AlgorithmSamples
             //ReverseStringWordByWord.Run("Hello! How are you");
             //KMPAlgorithm k = new KMPAlgorithm();
             //k.Search();
-             JumpGame.Run();
+            //JumpGame.Run();
+           // Fibonacci.Run();
+            QuickFind.Run();
         }
     }
 }

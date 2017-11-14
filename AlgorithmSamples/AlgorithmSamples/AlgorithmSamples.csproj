@@ -54,6 +54,9 @@
     <Compile Include="Array\RemoveDuplicates.cs" />
     <Compile Include="Array\SortArray.cs" />
     <Compile Include="Array\YieldClass.cs" />
+    <Compile Include="Dynamic Connectivity\QuickFind.cs" />
+    <Compile Include="Dynamic Connectivity\QuickUnion.cs" />
+    <Compile Include="Dynamic Programming\Fibonacci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="String\CheckAnagram.cs" />
