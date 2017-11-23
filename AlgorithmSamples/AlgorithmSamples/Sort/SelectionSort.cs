@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmSamples.ArrayPractice
+namespace AlgorithmSamples.Sort
 {
 	public static class SelectionSort
 	{

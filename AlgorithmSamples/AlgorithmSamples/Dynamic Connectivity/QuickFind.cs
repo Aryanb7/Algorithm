@@ -8,7 +8,7 @@ namespace AlgorithmSamples.Dynamic_Connectivity
 {
     public class QuickFind
     {
-
+        //eager approach
         // Union.To merge components containing p and q, change all entries
         //whose id equals id[p] to id[q](second number).
         //Union is too expensive.It takes N2 array accesses to process a sequence of
@@ -32,13 +32,16 @@ namespace AlgorithmSamples.Dynamic_Connectivity
 
             Console.ReadKey();
         }
+
         private static int[] id;
+
         public static void QuickFindUF(int N)
         {
             id = new int[N];
             for (int i = 0; i < N; i++)
                 id[i] = i;
         }
+
         public static bool Connected(int p, int q)
         {
             return id[p] == id[q];
