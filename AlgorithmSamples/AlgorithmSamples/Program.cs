@@ -35,7 +35,8 @@ namespace AlgorithmSamples
             // Fibonacci.Run();
             // QuickFind.Run();
             //QuickUnion.Run();
-            BinarySearch.Run();
+            //BinarySearch.Run();
+            LetterCombinationsOfPhoneNumber.Run();
         }
     }
 }
