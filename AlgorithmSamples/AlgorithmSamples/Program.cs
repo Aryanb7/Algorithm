@@ -1,4 +1,4 @@
-﻿using AlgorithmSamples.ArrayPractice;
+﻿using AlgorithmSamples.Sort;
 using AlgorithmSamples.Array;
 using AlgorithmSamples.String;
 using System;
@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmSamples.Dynamic_Programming;
+using AlgorithmSamples.Dynamic_Connectivity;
+using AlgorithmSamples.Search;
 
 namespace AlgorithmSamples
 {
@@ -28,7 +31,12 @@ namespace AlgorithmSamples
             //ReverseStringWordByWord.Run("Hello! How are you");
             //KMPAlgorithm k = new KMPAlgorithm();
             //k.Search();
-             JumpGame.Run();
+            //JumpGame.Run();
+            // Fibonacci.Run();
+            // QuickFind.Run();
+            //QuickUnion.Run();
+            //BinarySearch.Run();
+            LetterCombinationsOfPhoneNumber.Run();
         }
     }
 }

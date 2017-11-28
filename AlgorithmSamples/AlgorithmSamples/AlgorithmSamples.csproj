@@ -44,18 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayPractice\BubbleSort.cs" />
-    <Compile Include="ArrayPractice\InsertionSort.cs" />
-    <Compile Include="ArrayPractice\MergeSort.cs" />
-    <Compile Include="ArrayPractice\SelectionSort.cs" />
+    <Compile Include="Array\LetterCombinationsOfPhoneNumber.cs" />
+    <Compile Include="Sort\BubbleSort.cs" />
+    <Compile Include="Sort\InsertionSort.cs" />
+    <Compile Include="Sort\MergeSort.cs" />
+    <Compile Include="Sort\SelectionSort.cs" />
     <Compile Include="Array\JumpGame.cs" />
     <Compile Include="Array\LargestDifferenceInArray.cs" />
     <Compile Include="Array\LargestValueArray.cs" />
     <Compile Include="Array\RemoveDuplicates.cs" />
     <Compile Include="Array\SortArray.cs" />
     <Compile Include="Array\YieldClass.cs" />
+    <Compile Include="Dynamic Connectivity\QuickFind.cs" />
+    <Compile Include="Dynamic Connectivity\QuickUnion.cs" />
+    <Compile Include="Dynamic Programming\Fibonacci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="String\CheckAnagram.cs" />
     <Compile Include="String\EliminatePairs.cs" />
     <Compile Include="String\FirstNonRepeatedCharacter.cs" />
@@ -70,6 +75,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
