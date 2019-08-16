@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using AlgorithmSamples.Dynamic_Programming;
 using AlgorithmSamples.Dynamic_Connectivity;
 using AlgorithmSamples.Search;
+using AlgorithmSamples.Graph;
 
 namespace AlgorithmSamples
 {
@@ -36,7 +37,13 @@ namespace AlgorithmSamples
             // QuickFind.Run();
             //QuickUnion.Run();
             //BinarySearch.Run();
-            LetterCombinationsOfPhoneNumber.Run();
+            //LetterCombinationsOfPhoneNumber.Run();
+            //MinimumSwapSort.MinimumSwap(new int[] { 2, 3, 4, 1, 5 });
+            //LargestDifferenceInArray.Run();
+            //StockBuySell.Run();
+            // QuickSort.Run();
+            //InsertionSort.Run();
+            ProductOfOtherNumbers.Run();
         }
     }
 }

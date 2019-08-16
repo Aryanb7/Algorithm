@@ -6,60 +6,64 @@ using System.Threading.Tasks;
 
 namespace AlgorithmSamples.Sort
 {
-	//it is not good sort algorithm, but it is better than bubble sort and selection sort
-	public static class InsertionSort
-	{
-		public static void Run()
-		{
-			int[] input = new int[] { 1112, 1111, 2, 3, 445, 6, 6, 120, 1250, 125 };
-			Compare(input);
-			
-		}
+    //it is not good sort algorithm, but it is better than bubble sort and selection sort
+    public static class InsertionSort
+    {
+        public static void Run()
+        {
+            int[] input = new int[] { 1112, 1111, 2, 3, 445, 6, 6, 120, 1250, 125 };
+            Compare(input);
 
-		public static void Compare(int[] data)
-		{
-			//---------implementation 1       i think this is better
-			int currentValue, i, j;
-			int len = data.Length;
-			//the key is i =1 , in the first loop we compare the array[0 ====>j = i - 1] with array[1] 
-			for (i = 1; i < len; i++) {
-				currentValue = data[i];
-				j = i - 1;
+        }
 
-				while (j >= 0 && data[j] > currentValue) {
-					//in this step we move the larger value to next element of array or swipe the small element to the first of array(LOL)
-					//Actually this swipe the small element to the first of array is more correct
-					data[j + 1] = data[j];
-					j--;
-				}
-				//TODO: to set the very FIRST possible position in array that we can fill with the current value
-				data[j + 1] = currentValue;
-			}
+        public static void Compare(int[] data)
+        {
+            // First try
+            //var len = data.Length;
+            //for (int i = 0***; i+1 < len; i++)
+            //{
+            //    if (data[i] < data[i + 1])
+            //    {
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        var j = i;
+            //        while (j > 0 *** && data[j - 1] > data[j])
+            //        {
+            //            Swipe(data, j, j - 1);
+            //            j--;
+            //        }
+            //    }
+            //}
+            /* 1- in the first try "while (j > 0 ***" what will be happen if the first item larger than the second item
+               we don't even process the first option b/c j is not larger than 0, that is why we have to start from 1 "int i = 0***"
+               and not 0 => if we have such that condition "data[j - 1]" make sure that we have to start form 1
 
-			//implementation 2
-			//int i, j;
-			//int N = data.Length;
+            2- when we start form 1 no need to "i+1 < len" and obviously this" if (data[i] < data[i + 1]) ...."
+               */
 
-			//for (j = 1; j < N; j++) {
-			//	for (i = j; i > 0 &&   data[i - 1]>data[i]; i--) {
-			//		Swipe(data, i, i - 1);
-			//	}
-			//}
+            var len = data.Length;
+            for (int i = 1; i < len; i++)
+            {
+                var j = i;
+                while (j > 0 && data[j - 1] > data[j])
+                {
+                    Swipe(data, j, j - 1);
+                    j--;
+                }
+            }
+            Console.ReadKey();
+        }
 
-			for (int t = 0; t < data.Length; t++) {
-				Console.WriteLine(data[t]);
-			}
-			Console.ReadKey();
-		}
 
+        public static void Swipe(int[] data, int larger, int smaller)
+        {
+            int buffer;
+            buffer = data[larger];
+            data[larger] = data[smaller];
+            data[smaller] = buffer;
+        }
 
-		public static void Swipe(int[] data, int m, int n)
-		{
-			int buffer;
-			buffer = data[m];
-			data[m] = data[n];
-			data[n] = buffer;
-		}
-
-	}
+    }
 }

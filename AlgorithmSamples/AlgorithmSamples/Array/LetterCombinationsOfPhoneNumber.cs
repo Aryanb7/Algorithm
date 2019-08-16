@@ -13,7 +13,7 @@ namespace AlgorithmSamples.Array
                                               "mno", "pqrs", "tuv", "wxyz" };
         public static void Run()
         {
-            Calculate("234", 0, 0, "");
+            Calculate("239", 0, 0, "");
             Console.ReadKey();
         }
 
@@ -38,7 +38,9 @@ namespace AlgorithmSamples.Array
             for (int i = loopIndex; i < str.Length; i++)
             {
                 int newIndex = currentDigitIndex + 1;
-                string newChar = string.IsNullOrEmpty(lastUpdateChar) ? str[i].ToString() : lastUpdateChar + str[i].ToString();
+                string newChar = string.IsNullOrEmpty(lastUpdateChar) ? 
+                                                     str[i].ToString() : 
+                                                     lastUpdateChar + str[i].ToString();
 
                 if (newIndex < numbers.Length)
                     Calculate(numbers, newIndex, loopIndex, newChar);

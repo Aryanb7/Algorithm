@@ -42,7 +42,7 @@ namespace AlgorithmSamples.Sort
             int i_low = low, j_mid = mid;
             for (int k = 0; k < length; k++)
             {
-                if      (i_low == mid)                      aux[k] = a[j_mid++];   // it means when the ride side is completely sort - we have to just check the left side if there is any unsorted has remained 
+                if      (i_low == mid)                      aux[k] = a[j_mid++];   // it means when the right side is completely sort - we have to just check the left side if there is any unsorted has remained 
                 else if (j_mid == high)                     aux[k] = a[i_low++]; // it means when the left side is completely sort - we have to just check the right side if there is any unsorted has remained 
                 else if (a[j_mid].CompareTo(a[i_low]) < 0)  aux[k] = a[j_mid++]; //** main
                 else                                        aux[k] = a[i_low++];

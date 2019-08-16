@@ -10,10 +10,11 @@ namespace AlgorithmSamples.Array
 	{
 		public static void Run()
 		{
-			//Find();
-			int[] input = new int[] { 90, 10, 5, 8, 9, 4, 3 }; //5 and 9 =4 is largest 
-	
-			Console.WriteLine(solution(input));
+            //Find();
+            //int[] input = new int[] { 90, 10, 5, 8, 9, 4, 3 }; //5 and 9 =4 is largest 
+            int[] input = new int[] { 100, 180, 260, 310, 40, 535, 695 };//(0 3) (4 6)
+            //int[] input = new int[] { 23, 13, 25, 29 ,33, 19, 34,45 ,65, 67};(1 4) (5 9)
+            Console.WriteLine(solution(input));
 			Console.ReadKey();
 		}
 		public static void Find()
